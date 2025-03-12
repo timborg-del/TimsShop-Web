@@ -1,0 +1,19 @@
+.star-rating {
+  display: inline-block;
+  color: #ffd700; 
+  font-size: 1.5em; 
+}
+
+.star-rating span {
+  cursor: pointer; 
+  transition: color 0.2s ease-in-out;
+}
+
+.star-rating span:hover,
+.star-rating span:hover ~ span {
+  color: #ffa500; 
+}
+
+.star-rating .filled {
+  color: #ffd700; 
+}

@@ -1,0 +1,228 @@
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; 
+}
+
+.cart-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  top: 120px;
+  right: -100%;
+  height: calc(100vh - 120px);
+  width: 100vw;
+  margin: 0;
+  overflow-y: auto;
+  transition: right 0.5s ease;
+  z-index: 1005;
+}
+
+.cart-page-container.active {
+  right: 0;
+}
+
+.cart-page-container.leaving {
+  right: -100%;
+}
+
+.cart-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 80vh;
+  max-width: 1200px;
+  width: 80vw;
+  padding: 20px;
+  background: rgba(113, 0, 147, 0.976);
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(144, 95, 22, 0.467);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  overflow-y: auto;
+}
+
+.close-button-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: rgba(86, 249, 49, 0.515);
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.cart-content .total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.cart-container {
+  flex: 1;
+  margin-right: 20px;
+  max-width: 60%;
+}
+
+/* Ensure the form-container and its children take the full width */
+.form-container {
+  flex: 1;
+  display: table-column;
+  flex-direction: flex-end;
+  align-items: center;
+  max-width: 80%;
+  width: 100%; /* Ensure the form container takes full width */
+}
+
+.paypal-buttons-container {
+  width: 100%; /* Ensure the PayPal buttons take full width */
+  display: flex;
+  justify-content: center;
+}
+
+.paypal-buttons-container > div {
+  width: 100%; /* Ensure the inner container of PayPal buttons takes full width */
+}
+
+.paypal-button {
+  width: 100% !important; /* Ensure each PayPal button takes full width */
+  max-width: none !important; /* Remove max-width restriction */
+}
+
+.form-container .input-text {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(98, 0, 134);
+}
+
+.form-container p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hide-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.hideform_btn,
+.cartclear_btn,
+.checkout_btn {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  font-size: larger;
+  padding: 15px;
+  background: rgba(255, 27, 194, 0.368);
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgba(124, 0, 91, 0.368);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  transition: transform 0.3s ease;
+}
+
+.total-price {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.cartclear_btn {
+  background: rgba(98, 255, 1, 0.386);
+  box-shadow: 4px 4px 4px rgba(48, 125, 0, 0.386);
+}
+
+.checkout_btn {
+  background: rgba(0, 255, 166, 0.397);
+  box-shadow: 4px 4px 5px rgba(0, 124, 81, 0.397);
+}
+
+@media screen and (max-width: 767px) {
+  .cart-page-container {
+    top: 0; /* Ensure it starts at the top */
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    align-items: flex-start; /* Align content at the top */
+  }
+
+  .cart-page-container.active {
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .cart-page {
+    min-height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    max-width: 100%;
+    padding: 10px;
+    overflow-y: auto; /* Make it scrollable */
+  }
+
+  .cart-content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width */
+  }
+
+  .cart-container,
+  .form-container {
+    max-width: 100%;
+    margin: 10px 0;
+    width: 100%; /* Ensure full width */
+  }
+
+  .close-button-cart {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+
+  .form-container .input-text,
+  .form-container .input-text input {
+    max-width: 100%;
+  }
+}
+

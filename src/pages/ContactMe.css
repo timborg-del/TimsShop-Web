@@ -1,0 +1,102 @@
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; 
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  position: relative;
+  top: 100px; 
+  height: calc(100vh - 100px); 
+  width: 100vw;
+  margin: 0;
+  overflow: hidden; 
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.contact-container.visible {
+  opacity: 1; 
+}
+
+.contact-container h2 {
+  position: fixed; 
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  margin: 0;
+  z-index: 1002;
+  color: #ffffff;
+}
+
+.contact-content {
+  display: block;
+  max-width: 800px;
+  width: 100%; 
+  padding: 20px;
+  background: rgba(84, 11, 81, 0.831);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  opacity: 1; 
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  overflow-y: auto;
+  margin-top: 60px; 
+  z-index: 1001;
+}
+
+/* Style paragraphs for readability */
+.contact-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 10px; 
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .contact-container {
+    top: 50px; 
+  }
+
+  .contact-content {
+    padding: 10px; 
+    font-size: 1rem;
+  }
+  
+  .contact-content p {
+    font-size: 1rem; 
+  }
+  
+  .contact-container h2 {
+    font-size: 1.5rem; 
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contact-content {
+    padding: 15px; 
+  }
+
+  .contact-content p {
+    font-size: 1.1rem; 
+  }
+  
+  .contact-container h2 {
+    font-size: 1.75rem; 
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-content p {
+    font-size: 1.25rem; 
+  }
+
+  .contact-container h2 {
+    font-size: 2rem; 
+  }
+}

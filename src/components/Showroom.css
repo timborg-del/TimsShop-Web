@@ -1,0 +1,74 @@
+.showroom-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.showroom-container.visible {
+  opacity: 1;
+}
+
+.showroom-image {
+  flex: 1 1 70%; 
+  max-width: 70%; 
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  box-sizing: border-box;
+}
+
+.showroom-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.showroom-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth and dynamic hover effect */
+}
+
+.showroom-image img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Enhance shadow effect on hover */
+}
+
+.showroom-image img.fade-out {
+  opacity: 0;
+}
+
+.showroom-image p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .showroom-image {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .showroom-image p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+  

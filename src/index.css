@@ -1,0 +1,320 @@
+/* General reset and background settings */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-image: url('/src/assets/backround.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  font-family: monospace;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: slight background for better visibility */
+  color: #fff;
+  position: fixed;
+  z-index: 1002;
+}
+
+.centerLinks {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.centerLinks a {
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  font-family: monospace;
+  border-radius: 5px;
+  transition: opacity 2s ease, max-height 2s ease;
+  opacity: 1;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: smaller;
+  width: auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownContent.open {
+  display: flex;
+  max-height: auto;
+  border-radius: 5px;
+}
+
+.dropdownContent a {
+  display: flex;
+  padding: 8px 12px;
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+ 
+}
+
+.dropdownContent.open a:hover {
+  background-color: #f4f4f4;
+}
+
+.h1shop {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-weight: normal;
+  font-family: monospace;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 15px 15px;
+}
+
+.contact-link {
+  margin-right: 40px;
+}
+
+.card {
+  max-width: 8rem;
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) rotateX(5deg) scale(1.05);
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px;
+  color: rgb(0, 221, 18);
+  background: none;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-button:hover {
+  transform: translateY(-5px) rotateX(5deg) scale(1.05);
+}
+
+.cart-counter {
+  position: absolute;
+  top: 22px;
+  right: 27px;
+  background-color: none;
+  color: rgb(0, 175, 12);
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+}
+
+.buy_btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgba(22, 77, 77, 0.281);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.buy_btn:hover {
+  background-color: #0069d958;
+}
+
+.main-content {
+  position: relative;
+  padding: 20px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1003;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.open {
+  transform: rotate(45deg);
+}
+
+.hamburger-bar {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .hamburger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .hamburger-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  z-index: 1001;
+}
+
+.menu a {
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.menu.open .h1shop{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.applebee-button {
+  position: fixed;
+  bottom: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.applebee-logo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  margin-right: 5px; /* Space between image and text */
+}
+
+.applebee-text {
+  font-size: 12px; /* Adjust font size as needed */
+  color: rgba(255, 255, 255, 0.719); /* Adjust color and transparency */
+  font-family: Arial, sans-serif; /* Adjust font as needed */
+}
+
+.applebee-button:hover .applebee-text {
+  color: rgba(255, 255, 255, 0.8); /* Adjust hover effect */
+}
+
+.applebee-button:hover .applebee-logo {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .centerLinks {
+    justify-content: flex-start;
+    margin-top: 0px;
+    flex-wrap: wrap;
+  }
+
+  .centerLinks a, .h1shop {
+    font-size: 1.2rem;
+    margin: 0px 5px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .shop-container {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+}

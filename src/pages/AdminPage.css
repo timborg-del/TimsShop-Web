@@ -1,0 +1,233 @@
+/* AdminPage.css */
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  border-radius: 5px;
+  background: rgba(0, 153, 255, 0.714);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  display: flex;
+  text-align: center;
+  margin: 0;
+}
+
+header button {
+  padding: 10px 15px;
+  background-color: #0800ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+header button:hover {
+  background-color: #0056b3;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-right: 20px;
+}
+
+aside button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+aside button:hover {
+  background-color: #0056b3;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard {
+  margin-bottom: 20px;
+  max-width: fit-content;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.539);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.dashboard h2, .product-form h2, .product-list h2 {
+  margin-top: 0;
+}
+
+.product-form {
+  margin-bottom: 20px;
+}
+
+.product-form input, .product-form select {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-form button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.product-form button:hover {
+  background-color: #218838;
+}
+
+.product-list {
+  margin-top: 20px;
+}
+
+.product-list input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-list table, .product-list th, .product-list td {
+  border: 1px solid #dee2e6;
+  background: rgba(0, 0, 0, 0.539);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.product-list th, .product-list td {
+  padding: 12px;
+  text-align: left;
+}
+
+.product-list th {
+  border-radius: 5px;
+  background: rgba(0, 153, 255, 0.714);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.product-list button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.product-list button:hover {
+  background-color: #0056b3;
+}
+
+.product-list button:last-child {
+  background-color: #dc3545;
+}
+
+.product-list button:last-child:hover {
+  background-color: #c82333;
+}
+
+.product-gallery {
+  margin-top: 20px;
+}
+
+.product-gallery-item {
+  margin-bottom: 20px;
+}
+
+/* Style for the delete button within additional-image-item */
+.additional-image-item button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.additional-image-item button:hover {
+  background-color: #c82333;
+}
+
+/* Style for the additional-images div */
+.additional-images {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.additional-image-item {
+  display: inline-block;
+  margin: 5px;
+}
+
+.product-gallery img,
+.showroom-list img,
+.additional-images img {
+  width: 150px;
+  height: 150px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
+
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}

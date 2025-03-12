@@ -1,0 +1,168 @@
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  top: 100px;
+  height: calc(100vh - 70px);
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.home-container.visible {
+  opacity: 1;
+}
+
+.home-container h2 {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  margin: 0;
+  z-index: 1002;
+  color: #ffffff;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background: none;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+}
+
+.intro-text {
+  position: fixed;
+  width: 40%;
+  max-width: 450px;
+  margin-right: 20px;
+  color: #ffffff;
+  background-color: rgba(242, 157, 0, 0.952);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  left: 20px;
+  top: 120px;
+}
+
+.intro-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Existing CSS */
+
+/* New CSS for transition effect */
+.image-section {
+  margin-left: 45%;
+  width: 55%;
+  padding-top: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  z-index: 1000;
+  position: relative;
+}
+
+.image-section.fade-out {
+  opacity: 0;
+}
+
+.gif-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  height: auto;
+  box-sizing: border-box;
+  border: none;
+}
+
+.gif-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .home-container {
+    height: auto;
+  }
+
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 1px;
+    padding: 0 10px;
+    position: relative;
+  }
+
+  .intro-text {
+    position: relative;
+    width: 90%;
+    left: 10px;
+    top: 0;
+    max-width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.6);
+  }
+
+  .intro-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .image-section {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    z-index: 1000;
+  }
+
+  .showroom-image {
+    max-width: 100%;
+  }
+
+  .gif-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: none;
+  }
+
+  .gif-container img {
+    width: 100%;
+    height: auto;
+  }
+}

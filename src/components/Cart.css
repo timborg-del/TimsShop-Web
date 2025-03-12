@@ -1,0 +1,111 @@
+
+
+
+.cart-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-width: auto;
+  max-height: fit-content;
+  overflow-y: auto;
+  max-width: auto;
+}
+
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(101, 1, 124);
+  border: 1px solid rgba(162, 3, 206, 0.312);
+  box-shadow: 4px 4px 4px rgba(48, 48, 48, 0.5);
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+}
+
+.cart-item-image {
+  height: 140px; 
+  width: 140px; 
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 25px; 
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.cart-item-details p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px; 
+}
+
+.cart-item-actions button {
+  padding: 10px;
+  
+  font-size: larger;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background: rgba(8, 7, 70, 0.934);
+  border-radius: 5px;
+  box-shadow: 0 0px 5px #0000001a;
+  backdrop-filter: blur(1.1px);
+  -webkit-backdrop-filter: blur(1.1px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cart-item-actions button:hover {
+  transition: transform 0.3s ease;
+  background-color: rgb(168, 43, 226);
+}
+
+/* Add responsive styles for larger screens */
+@media screen and (min-width: 768px) {
+  .cart-item {
+    flex-direction: row; 
+  }
+
+  .cart-item-details {
+    flex-direction: column;
+  }
+
+  .cart-item-actions {
+    flex-direction: row;
+    width: 100%; 
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .cart-item-actions button {
+    margin: 10px 20px; 
+  }
+}
